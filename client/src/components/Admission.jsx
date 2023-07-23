@@ -113,6 +113,13 @@ const Admission = () => {
             return;
         }
 
+        // Change the image file name to username.extension
+        const username = user.uname;
+        const originalFileName = user.image.name;
+        const fileExtension = originalFileName.split('.').pop();
+        const newFileName = `${username}.${fileExtension}`;
+        const renamedImageFile = new File([user.image], newFileName, { type: user.image.type });
+       
         if (!name) {
             alert("Enter Your Name");
         } else if (!fname) {
@@ -160,7 +167,7 @@ const Admission = () => {
 
             const formData = new FormData();
 
-            formData.append('image', user.image)
+            formData.append('image', renamedImageFile);
             formData.append('name', user.name)
             formData.append('fname', user.fname)
             formData.append('mname', user.mname)
