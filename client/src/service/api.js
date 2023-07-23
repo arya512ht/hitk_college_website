@@ -11,8 +11,7 @@ export const addUser = async (data) => {
     console.log("Error While Create Api", error);
     throw error; // Rethrow the error so it can be caught in the calling function
   }
-}
-
+};
 
 export const getUsersdata = async (data) => {
   try {
@@ -22,13 +21,22 @@ export const getUsersdata = async (data) => {
     console.log('Error While Fetching Data', error);
     throw error; // Rethrow the error so it can be caught in the calling function
   }
-}
+};
 
-
-export const getUsers = async() =>{
-  try{
-      return await axios.get(`${URL}/all`);
-  }catch(error){
-      console.log('Error While Fetching Data', error);
+export const getUsers = async () => {
+  try {
+    return await axios.get(`${URL}/all`);
+  } catch (error) {
+    console.log('Error While Fetching Data', error);
   }
-}
+};
+
+export const checkUsernameAvailability = async (data) => {
+  try {
+    const response = await axios.post(`${URL}/checkUsername`, data);
+    return response.data;
+  } catch (error) {
+    console.log('Error While Checking Username Availability', error);
+    throw error;
+  }
+};
