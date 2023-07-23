@@ -1,0 +1,78 @@
+.sidebar{
+    height: 100%!important;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.sidebar .sidebar-top{
+    height: 69px;
+    background-color: #f0ec0d;
+  
+}
+.sidebar .sidebar-top p{
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+}
+#sidebar-bottom{
+    height: auto !important;
+    padding-top: 15px;
+}
+#sidebar-bottom nav .nav{
+    display: block;
+    text-decoration: none;
+    color: #313131;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 10px;
+    font-family: redo;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+#sidebar-bottom nav .nav i{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#sidebar-bottom nav .nav:hover{
+    background-color: #FF1E00;
+    color: #fff;
+    padding-top: 7.5!important;
+}
+#nav1{
+    background-color: #FF1E00!important;
+    color: #fff!important;
+}
+#sidebar-bottom nav .title{
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#sidebar-bottom nav .title span{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    opacity: 0.7;
+}
+#drop, #drop1, #drop2{
+    float: right;
+    padding-top: 6px;
+    font-size: 11px;
+}
+#submenu{
+    display: none;
+}

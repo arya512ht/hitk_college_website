@@ -1,0 +1,99 @@
+.view-student {
+    padding: 20px;
+  }
+  
+  .body-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .service-view {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .service-view h5 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .table th,
+  .table td {
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  /* Additional styling for responsive design */
+  @media screen and (max-width: 767px) {
+    .service-view {
+      padding: 10px;
+    }
+  
+    .table-responsive {
+      overflow-x: auto;
+    }
+  
+    .table th,
+    .table td {
+      text-align: left;
+    }
+  
+    .body-title h1 {
+      font-size: 24px;
+    }
+  
+    .table-responsive table {
+      font-size: 14px;
+    }
+  
+    .table th,
+    .table td {
+      padding: 8px 10px;
+    }
+  
+    .service-view h5 {
+      font-size: 18px;
+    }
+    
+    /* Additional mobile styles */
+    .table-responsive {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    .table thead {
+      display: none;
+    }
+  
+    .table tbody tr {
+      display: block;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  
+    .table tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+  
+    .table tbody td:before {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  }
+  
+  
+  

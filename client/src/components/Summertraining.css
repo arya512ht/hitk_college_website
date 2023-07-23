@@ -1,0 +1,41 @@
+.course{
+    width: 80%;
+    margin: 3rem 10rem 3rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 1px solid black;
+}
+
+
+.left{
+    text-align: center;
+    margin: auto;
+    
+   
+}
+
+.right{
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    align-items: center;
+
+}
+
+.det{
+    
+    margin: auto;
+    padding: 1rem;
+    max-width: 80%;
+}
+
+
+@media screen and (max-width:620px){
+    .course{
+        grid-template-columns: 1fr;
+        margin: 2.5rem;
+    }
+}

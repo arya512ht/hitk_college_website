@@ -1,0 +1,45 @@
+.body{
+    width: 80%;
+    margin: 3rem 10rem 3rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.left{
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    max-width: 400px;
+}
+
+.left p{
+    margin: 1.2rem 0;
+}
+
+.right{
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    
+}
+
+.left img{
+    max-width: 100%;
+    border: 2px solid #131212;
+    height: 50vh;
+    border-radius: 20px;
+    width: 400px;
+}
+
+@media screen and (max-width:780px){
+    .body{
+
+        grid-template-columns: 1fr;
+        margin: 2.5rem;
+    }
+}
+

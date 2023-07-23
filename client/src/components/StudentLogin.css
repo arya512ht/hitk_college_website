@@ -1,0 +1,96 @@
+.form {
+    height: auto;
+    padding-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: left;
+    margin-top: 25px;
+
+
+}
+
+.col-12 {
+    margin-top: 10px;
+}
+
+.loginClass {
+    height: auto;
+    padding: 10px 400px 10px 400px;
+
+    border-radius: 10px;
+}
+
+.form-filed .form-group input[type="text"],
+input[type="password"] {
+    height: 45px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.form-filed .form-group select {
+    height: 45px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.submit-btn {
+    display: block;
+    float: right;
+}
+
+.submit-btn .btn-submit {
+    background-color: #0079FF;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 8px 40px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.submit-btn input[type="reset"] {
+    background-color: #FF0060;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 8px 40px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+@media (max-width:900px) {
+    @media (min-width:200px) {
+        .loginClass {
+            height: auto;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .submit-btn .btn-submit {
+            padding: 5px 5px;
+        }
+
+        .submit-btn input[type="reset"] {
+            padding: 5px 5px;
+        }
+    }
+
+}
+
+@media (max-width:1200px) {
+    @media (min-width:920px) {
+        .loginClass {
+            height: auto;
+            padding: 10px 150px 10px 150px;
+        }
+
+        .submit-btn .btn-submit {
+            padding: 8px 40px;
+        }
+
+        .submit-btn input[type="reset"] {
+            padding: 8px 40px;
+        }
+    }
+
+}

@@ -1,0 +1,143 @@
+
+
+.mycontainer .row1 .card1 {
+    height: 280px;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+
+
+}
+
+.mycontainer {
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 100px;
+    overflow: scroll;
+
+}
+
+.mycontainer .row1 .card1 img {
+    border-radius: 10px 10px 0px 0px;
+    height: 130px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.mycontainer .row1 .card1 h6 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px 0px 0px 0px;
+    display: block;
+    text-align: center;
+
+}
+
+.mycontainer .row1 .card1 span {
+    display: block;
+    padding: 0px 5px 0px 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mycontainer .row1 {
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 14px;
+
+}
+
+
+@media (max-width:550px) {
+    @media(min-width:250px) {
+
+
+        .title {
+            height: auto;
+        }
+
+        .title h1 {
+            font-size: 25px;
+            padding: 15px;
+        }
+
+        .mycontainer .row1 {
+            max-width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        .mycontainer {
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            overflow: scroll;
+
+        }
+
+        .mycontainer .row1 .card1 {
+            height: 260px;
+            background-color: #fff;
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            border-radius: 5px;
+
+
+        }
+    }
+}
+
+
+@media (min-width:700px) {
+    @media(max-width:1050px) {
+
+
+        .title {
+            height: auto;
+        }
+
+        .title h1 {
+            font-size: 25px;
+            padding: 15px;
+        }
+
+        .mycontainer .row1 {
+            max-width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .mycontainer {
+            padding-left: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 30px;
+            overflow: scroll;
+
+        }
+
+        .mycontainer .row1 .card1 img {
+            border-radius: 10px 10px 0px 0px;
+            height: 150px;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #EEE;
+}

@@ -1,0 +1,77 @@
+.navbar-brand{
+    font-size: 30px;
+    margin-left: 20px;
+    position: relative;;
+}
+.btn-warning{
+    margin-right: 10px;
+}
+.menu-item img{
+    border-radius: 10px 0px 0px 0px;
+}
+.menu-item {
+    height: 140px;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px 10px 0px 0px;
+   margin-bottom: 20px;
+}
+.menu-item:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+.menu-item .left-area {
+    height: 140px;
+    width: 40%;
+    float: left;
+}
+
+.menu-item .right-area {
+    height: 140px;
+    width: 60%;
+    float: left;
+}
+
+.menu-item .right-area h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 10px 0px 20px;
+}
+
+.menu-item .right-area span {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0px 10px 0px 20px;
+    margin-top: -5px;
+}
+
+.order h6{
+    margin-left: 70px;
+}
+
+
+@media(max-width:600px) {
+    #res {
+        display: block;
+    }
+
+    #desk {
+        display: none;
+    }
+
+    .navbar-collapse .active button{
+        margin-top: 5px;
+        
+    }
+}
+@media(max-width:1000px) {
+    .container-fluid .row .btn button {
+            /* margin-left: 25px; */
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+   .order h6 {
+       margin-left: 40px;
+   }
+}

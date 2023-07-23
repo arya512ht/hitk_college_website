@@ -1,0 +1,92 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-mid {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.hero-mid h1 {
+  padding-top: 4rem !important;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+}
+
+.hero-mid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  color: #f4f4f4;
+  font-size: 1.3rem;
+  padding: 1rem 1rem 4rem 1rem;
+}
+
+.hero-text .show {
+  text-decoration: none;
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+.hero-text .show:hover {
+  background-color: #01959a;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  padding: 1.2rem 1.7rem;
+  border-radius: 2rem;
+}
+
+.hero-text .hide {
+  display: none;
+}
+
+@media screen and (max-width: 555px) {
+  .hero-text h1 {
+    padding: 10px 20px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    padding: 0rem 0 2rem 0;
+  }
+
+  .hero-text .show {
+    padding: 0.6rem 1.1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}

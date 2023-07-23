@@ -1,0 +1,94 @@
+.myclass1 .newrow1 .box1 {
+    height: 260px;
+    width: 100%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.myclass1{
+    margin: 50px 0px 50px 0px;
+}
+.myclass1 .newrow1 .box1 .box1-title img {
+    height: 200px;
+    width: 100%;
+}
+
+.myclass1 .newrow1 .box1:hover {
+    cursor: pointer;
+
+    background-color: antiquewhite;
+    transition: 2s;
+}
+
+.myclass1 .newrow1 {
+    padding: 40px 100px 20px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+
+}
+
+.myclass1 .newrow1 .box1 .box1-body .box1-body-title {
+    text-decoration: underline;
+
+}
+
+.myclass1 .newrow1 .box1 .box1-body .box1-body-body {
+    font-size: small;
+}
+
+.myclass1 .newrow1 .box1 .box1-body .box1-body-body a {
+    size: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: blue;
+
+}
+
+@media (max-width:550px) {
+    @media (min-width:200px) {
+
+
+        .myclass1 .newrow1 {
+            padding: 10px 10px 10px 10px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px;
+        }
+
+        .myclass1 .newrow1 .box1 {
+            height: 230px;
+            width: 100%;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+            padding: 10px 10px 10px 10px;
+            border-radius: 5%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (min-width:560px) {
+    @media (max-width:950px) {
+        .myclass1 .newrow1 {
+            padding: 10px 5px 10px 5px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+
+        .myclass1 .newrow1 .box1 {
+            height: 250px;
+            width: 100%;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+            padding: 20px 20px 20px 20px;
+            border-radius: 5%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px;
+        }
+    }
+
+}

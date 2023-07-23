@@ -1,0 +1,42 @@
+.img{
+    height: 600px;
+}
+
+.details{
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    max-width: 80%;
+}
+.heading h3{
+    margin: auto;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.heading h5{
+    font-weight: 600;
+    margin: auto;
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom:2rem;
+
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:50px;
+   
+   
+}
+
+.list1{
+    margin: auto;
+}
+
+@media screen and (max-width:780px){
+    .list{
+        grid-template-columns: 1fr;
+    }
+
+}

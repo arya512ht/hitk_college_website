@@ -1,0 +1,60 @@
+#zxxx {
+    padding-top: 0.2px;
+}
+
+#d {
+    border: none;
+
+}
+
+.row {
+    margin-top: 0%;
+}
+
+#fckf {
+    width: 97px;
+}
+
+#fckff.btn:active {
+    color: red;
+    background-color: white;
+}
+
+#exampleInputPassword23 {
+    width: 24vw;
+}
+
+#exampleInputUsername233 {
+    width: 90%;
+}
+
+@media(max-width:933px) {
+    #exampleInputPassword23 {
+        width: 25vw;
+    }
+
+    #exampleInputUsername233 {
+        width: 110%;
+    }
+
+}
+
+@media(max-width:768px) {
+    #exampleInputPassword23 {
+        width: 45vw;
+    }
+
+    #exampleInputUsername233 {
+        width: 82%;
+    }
+}
+
+@media(max-width:575px) {
+    #exampleInputPassword23 {
+        width: 70vw;
+    }
+
+    #exampleInputUsername233 {
+        width: 89%;
+    }
+}

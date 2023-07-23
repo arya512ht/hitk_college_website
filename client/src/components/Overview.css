@@ -1,0 +1,18 @@
+.carousel-inner img {
+    opacity: 0.9;
+    margin-top: 20px;
+    width: 75%;
+    height: 500px;
+    border-radius: 1rem;
+}
+.over-caption{
+    text-align: justify;
+    padding: 20px;
+}
+
+@media (max-width:500px) {
+    .carousel-inner img {
+        max-height: 200px;
+    }
+
+}

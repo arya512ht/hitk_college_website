@@ -1,0 +1,87 @@
+.uback {
+    background: linear-gradient(
+      106.37deg,
+      #ffe1bc 29.63%,
+      #ffcfd1 51.55%,
+      #f3c6f1 90.85%
+    );
+    margin: 30px;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 15px 10px;
+    padding: 20px;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .btn-logout {
+    padding: 8px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-logout:hover {
+    background-color: #0056b3;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .user-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-details {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
+    text-align: left;
+  }
+  
+  .user-details p {
+    margin: 5px 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .user-details {
+      max-width: 100%;
+    }
+  }
+  .section-box {
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
