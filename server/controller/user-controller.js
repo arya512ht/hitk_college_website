@@ -1,4 +1,3 @@
-// user-controller.js
 import User from "../schema/user-schema.js";
 
 export const getUsersData = async (req, res) => {
@@ -18,5 +17,18 @@ export const getUsers = async (request, response) => {
         response.status(404).json({ message: error.message });
     }
 }
+
+export const checkUsernameAvailability = async (req, res) => {
+    try {
+        const existingUser = await User.findOne({ uname: req.body.uname });
+        if (existingUser) {
+            res.json({ available: false });
+        } else {
+            res.json({ available: true });
+        }
+    } catch (error) {
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+};
 
 
