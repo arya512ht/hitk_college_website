@@ -31,4 +31,38 @@ export const checkUsernameAvailability = async (req, res) => {
     }
 };
 
+export const deleteUser = async (req, res) => {
+    const { id } = req.params;
+    try {
+        await User.findByIdAndDelete(id);
+        res.status(200).json({ message: "User deleted successfully." });
+    } catch (error) {
+        res.status(404).json({ message: "User not found." });
+    }
+};
 
+export const editUser = async (req, res) => {
+    const { id } = req.params;
+    const userData = req.body;
+    try {
+        const updatedUser = await User.findByIdAndUpdate(id, userData, { new: true });
+        res.status(200).json(updatedUser);
+    } catch (error) {
+        res.status(400).json({ message: "Error while updating user." });
+    }
+};
+
+// ... (existing code)
+
+export const getUserById = async (req, res) => {
+    const { id } = req.params;
+    try {
+      const user = await User.findById(id);
+      res.status(200).json(user);
+    } catch (error) {
+      res.status(404).json({ message: "User not found." });
+    }
+  };
+  
+
+  
