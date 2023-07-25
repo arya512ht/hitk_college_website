@@ -62,31 +62,43 @@ const Admission = () => {
 
     const submitForm = async (e) => {
         e.preventDefault();
+
+        const { image, name, fname, mname, dob, mobile, email, gender, rel, uname, pass, street, post, police, dist, state, pin, course, department, roll, adate } = user
+
         // Check username availability
         const usernameAvailable = await checkUsernameAvailability({ uname: user.uname });
         if (!usernameAvailable.available) {
             alert("Username is already taken. Please choose a different username.");
             return;
         }
-        const { image, name, fname, mname, dob, mobile, email, gender, rel, uname, pass, street, post, police, dist, state, pin, course, department, roll, adate } = user
+
+        // Check if the roll number is a 6-digit number
+        if (!/^\d{6}$/.test(user.roll)) {
+            alert("Roll number must be a 6-digit number.");
+            return;
+        }
+
         // Validate mobile number for Indian numbers and 10-digit length
         const mobileRegex = /^[6-9]\d{9}$/;
         if (!mobileRegex.test(mobile)) {
             alert("Enter a valid 10-digit Indian mobile number");
             return;
         }
+
         // Check for 6-digit pin code
         const pinRegex = /^\d{6}$/;
         if (!pinRegex.test(pin)) {
             alert("Pin code must be 6 digits.");
             return;
         }
+
         // Check for valid email address
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert("Please enter a valid email address.");
             return;
         }
+        
         // Check if the date of birth is before today's date
         const today = new Date();
         const selectedDOB = new Date(dob);
@@ -119,7 +131,7 @@ const Admission = () => {
         const fileExtension = originalFileName.split('.').pop();
         const newFileName = `${username}.${fileExtension}`;
         const renamedImageFile = new File([user.image], newFileName, { type: user.image.type });
-       
+
         if (!name) {
             alert("Enter Your Name");
         } else if (!fname) {

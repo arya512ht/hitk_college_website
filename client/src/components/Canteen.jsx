@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import HomeHero from "./HomeHero";
 import "./Food.css";
+import { NavLink } from "react-router-dom";
 
 const Canteen = () => {
   const [data, setItem] = useState(Food);
@@ -30,6 +31,7 @@ const Canteen = () => {
           <div className="col-12">
             <navbar className="navbar navbar-expand-lg navbar-light bg-light">
               <h1 className="navbar-brand">Today's Menu</h1>
+             
               <button
                 className="navbar-toggler btn btn-warning"
                 type="button"
@@ -44,6 +46,9 @@ const Canteen = () => {
 
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto">
+                  <li className="nav-item active"> 
+                      <NavLink to={'/CanteenPayment'}><button  className="btn btn-success">Make Payment</button></NavLink>
+                  </li>
                   <li className="nav-item active">
                     <button className="btn btn-warning" onClick={() => setItem(Food)}>All Food</button>
                   </li>

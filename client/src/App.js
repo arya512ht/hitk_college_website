@@ -36,6 +36,8 @@ import Classroutine from "./components/Classroutine";
 import Adminloginform from "./components/Adminloginform";
 import Know from "./components/Know";
 import UserDashboard from "./components/UserDashboard";
+import CanteenPayment from "./components/CanteenPayment";
+import EditStudent from "./components/EditStudent";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -80,6 +82,8 @@ function App() {
         <Route path="/know" element={<Know />}></Route>
         <Route path="/user-dashboard" element={<UserDashboard />} ></Route>
         <Route path="/ulogin" element={<StudentLogin />} ></Route>
+        <Route path="/canteenpayment" element={<CanteenPayment />}/>
+        <Route path="/EditStudent/:id" element={<EditStudent />} />
       </Routes>
     </div>
   );

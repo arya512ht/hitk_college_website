@@ -40,3 +40,33 @@ export const checkUsernameAvailability = async (data) => {
     throw error;
   }
 };
+
+export const deleteUser = async (userId) => {
+  try {
+      const response = await axios.delete(`${URL}/deleteUser/${userId}`);
+      return response.data;
+  } catch (error) {
+      console.log("Error while deleting user", error);
+      throw error;
+  }
+};
+
+export const editUser = async (userId, data) => {
+  try {
+      const response = await axios.put(`${URL}/editUser/${userId}`, data);
+      return response.data;
+  } catch (error) {
+      console.log("Error while editing user", error);
+      throw error;
+  }
+};
+
+export const getUserById = async (userId) => {
+  try {
+    const response = await axios.get(`${URL}/getUser/${userId}`);
+    return response.data; // Assuming the API returns the user details as response.data
+  } catch (error) {
+    console.log("Error while fetching user details", error);
+    throw error;
+  }
+};

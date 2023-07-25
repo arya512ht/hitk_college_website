@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { getUsers } from "../service/api";
+import { getUsers, deleteUser } from "../service/api";
 import "./ViewStudent.css";
-import {useNavigate } from 'react-router-dom';
-import { Button} from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const ViewStudent = () => {
     const [users, setUsers] = useState([]);
@@ -15,10 +14,32 @@ const ViewStudent = () => {
         let response = await getUsers();
         setUsers(response.data);
     };
+
     const navigate = useNavigate();
+
     const handleLogout = () => {
         navigate('/onlinefacility');
     };
+
+    const handleDelete = async (id) => {
+        try {
+            // Call the deleteUser API to delete the user
+            await deleteUser(id);
+
+            // After successful deletion, update the state to refresh the users list
+            const updatedUsers = users.filter((user) => user._id !== id);
+            setUsers(updatedUsers);
+        } catch (error) {
+            console.log('Error while deleting user', error);
+        }
+    };
+
+    const handleEdit = (user) => {
+        // Navigate to the edit page with the selected user details as state
+        navigate(`/EditStudent/${user._id}`, { state: { user } });
+    };
+
+
     return (
         <div className="view-student">
             <div className="container">
@@ -49,6 +70,7 @@ const ViewStudent = () => {
                                             <th>Department</th>
                                             <th>Roll</th>
                                             <th>Image</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -66,19 +88,21 @@ const ViewStudent = () => {
                                                     <img
                                                         src={`http://localhost:8000/uploads/${user.image}`}
                                                         alt="uimage"
-                                                        width="30px"
-                                                        height="30px"
+                                                        width="50px"
+                                                        height="50px"
+                                                        style={{borderRadius:"10px"}}
                                                     />
+                                                </td>
+                                                <td>
+                                                <button type="button" class="btn btn-outline-success" onClick={() => handleEdit(user)}>Edit</button>
+                                                    <button type="button" class="btn btn-outline-danger" onClick={() => handleDelete(user._id)}>Delete</button>
                                                 </td>
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
-
                             </div>
-                            <Button variant='contained' color='primary' onClick={handleLogout}>
-                                Log out
-                            </Button>
+                            <button type="button" class="btn btn-primary" onClick={handleLogout} style={{marginTop:"10px"}}>Log Out</button> 
                         </div>
                     </div>
                 </div>
@@ -88,3 +112,5 @@ const ViewStudent = () => {
 };
 
 export default ViewStudent;
+
+
