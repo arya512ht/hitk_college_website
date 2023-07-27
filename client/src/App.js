@@ -41,9 +41,11 @@ import EditStudent from "./components/EditStudent";
 
 import Dashborad from "./components/Dashborad";
 import Profile from "./components/Profile";
-
+import PaymentVerify from "./components/PaymentVerify";
+import StudentVerify from "./components/StudentVerify";
 
 import { Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
@@ -95,6 +97,8 @@ function App() {
         <Route path="/StudentDashboard" element={<Dashborad/>}></Route>
         <Route path="/StudentDashboard/Profile" element={<Profile/>}></Route>
         <Route path="/StudentDashboard/Home" element={<Dashborad/>}></Route>
+        <Route path="/PaymentVerify" element={<PaymentVerify />}></Route>
+        <Route path="/StudentVerify" element={<StudentVerify />}></Route>
       </Routes>
     </div>
   );

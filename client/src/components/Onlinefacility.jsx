@@ -39,13 +39,13 @@ function CampusSection() {
                 <div className="campus-col">
                     <img src="images/pay.jpg" alt="Online Fees Payment" />
                     <div className="layer">
-                        <Link to="/payment"><h3>Online Fees Payment</h3></Link>
+                        <Link to="/PaymentVerify"><h3>Online Fees Payment</h3></Link>
                     </div>
                 </div>
                 <div className="campus-col">
                     <img src="images/login.jpg" alt="Know your log-in details" />
                     <div className="layer">
-                        <Link to="/know"><h3>Student Virtual ID</h3></Link>
+                        <Link to="/StudentVerify"><h3>Student Virtual ID</h3></Link>
                     </div>
                 </div>
                 <div className="campus-col">

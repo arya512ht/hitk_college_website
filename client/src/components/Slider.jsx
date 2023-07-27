@@ -29,6 +29,29 @@ export default function App() {
         >
           <SwiperSlide>
             <div className="card">
+              <img className="card-img" src="images/arya.jpg" alt="review" />
+              <p className="card-main"><strong>HITK provides an exceptional academic experience with dedicated
+                faculty and a well-rounded curriculum. The campus is vibrant and offers ample resources for both
+                learning and personal development. I highly recommend HITK to anyone seeking a rewarding college journey</strong> </p>
+              <p className="card-footer">Arya Das</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="card">
+              <img className="card-img" src="images/tathagata1.jpg" alt="review" />
+              <p className="card-main"><strong>Paradise Found: A Breathtaking Journey at HIT</strong><br></br>
+                Our HITK is an absolute haven for education and personal growth. Its picturesque campus,
+                adorned with lush gardens and modern architecture, offers a surreal learning experience.
+                The passionate and dedicated faculty inspire students to achieve greatness. The vibrant and diverse
+                community encourages cultural exchange and lifelong friendships. With top-notch facilities and a myriad
+                of extracurricular opportunities, it's a place where dreams take flight. HITK
+                truly redefines the beauty of higher education!<br></br>
+                <strong>"I believe that it is important to create many happy memories so that we can try to wipe out sad ones"</strong></p>
+              <p className="card-footer">Tathagata Ghosh</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="card">
               <img className="card-img" src="images/surya.jpeg" alt="review" />
               <p className="card-main"><strong>Enchanting Campus Harmony: A Haven of Academic Brilliance and Natural Beauty</strong><br></br>
                 This college's picturesque campus offers a harmonious blend of architectural splendor and natural beauty.
@@ -63,20 +86,7 @@ export default function App() {
               <p className="card-footer">Saikat Karar</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className="card">
-              <img className="card-img" src="images/tathagata1.jpg" alt="review" />
-              <p className="card-main"><strong>Paradise Found: A Breathtaking Journey at HIT</strong><br></br>
-                Our HITK is an absolute haven for education and personal growth. Its picturesque campus,
-                adorned with lush gardens and modern architecture, offers a surreal learning experience.
-                The passionate and dedicated faculty inspire students to achieve greatness. The vibrant and diverse
-                community encourages cultural exchange and lifelong friendships. With top-notch facilities and a myriad
-                of extracurricular opportunities, it's a place where dreams take flight. HITK
-                truly redefines the beauty of higher education!<br></br>
-                <strong>"I believe that it is important to create many happy memories so that we can try to wipe out sad ones"</strong></p>
-              <p className="card-footer">Tathagata Ghosh</p>
-            </div>
-          </SwiperSlide>
+          
           <SwiperSlide>
             <div className="card">
               <img className="card-img" src="images/tabassum.jpeg" alt="review" />
@@ -88,17 +98,6 @@ export default function App() {
                 architecture to the supportive community, this college radiates warmth and encouragement. Embrace a journey of
                 education and growth in this truly pleasant haven.</p>
               <p className="card-footer">Tabassum Halque</p>
-            </div>
-          </SwiperSlide>
-
-
-          <SwiperSlide>
-            <div className="card">
-              <img className="card-img" src="images/arya.jpg" alt="review" />
-              <p className="card-main"><strong>HITK provides an exceptional academic experience with dedicated
-                faculty and a well-rounded curriculum. The campus is vibrant and offers ample resources for both
-                learning and personal development. I highly recommend HITK to anyone seeking a rewarding college journey</strong> </p>
-              <p className="card-footer">Arya Das</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>

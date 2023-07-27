@@ -396,22 +396,22 @@ const Admission = () => {
                                     <label for="exampleFormControlSelect1">Department<span style={{ color: 'red' }}>*</span></label>
                                     <select class="form-control" name="department" onChange={onValueChange} id="exampleFormControlSelect1">
                                         <option selected value={''}>--Select Select--</option>
-                                        <option value={'cse'}>Computer Science & Engineering (CSE)</option>
-                                        <option value={'cse-aiml'}>Computer Science & Engineering (Artificial Intelligence
+                                        <option value={'CSE'}>Computer Science & Engineering (CSE)</option>
+                                        <option value={'CSE-AIML'}>Computer Science & Engineering (Artificial Intelligence
                                             and Machine Learning) (CSE - AI & ML)</option>
-                                        <option value={'cse-iotcs'}>Computer Science & Engineering (IoT & Cyber Security
+                                        <option value={'CSE-IOTCS'}>Computer Science & Engineering (IoT & Cyber Security
                                             including Block Chain Technology) (CSE - IoT & CS)</option>
-                                        <option value={'cse-desc'}>Computer Science & Engineering (Data Science)
+                                        <option value={'CSE-DESC'}>Computer Science & Engineering (Data Science)
                                             (CSE - D.Sc.)</option>
-                                        <option value={'csbs'}>Computer Science and Business Systems (CSBS)</option>
-                                        <option value={'ece'}>Electronics & Communication Engineering (ECE)</option>
-                                        <option value={'it'}>Information Technology (IT)</option>
-                                        <option value={'ee'}>Electrical Engineering (EE)</option>
-                                        <option value={'aeie'}>Applied Electronics & Instrumentation Engineering (AEIE)</option>
-                                        <option value={'me'}>Mechanical Engineering (ME)</option>
-                                        <option value={'ce'}>Civil Engineering (CE)</option>
-                                        <option value={'che'}>Chemical Engineering (ChE)</option>
-                                        <option value={'bt'}>Biotechnology (BT)</option>
+                                        <option value={'CSBS'}>Computer Science and Business Systems (CSBS)</option>
+                                        <option value={'ECE'}>Electronics & Communication Engineering (ECE)</option>
+                                        <option value={'IT'}>Information Technology (IT)</option>
+                                        <option value={'EE'}>Electrical Engineering (EE)</option>
+                                        <option value={'AEIE'}>Applied Electronics & Instrumentation Engineering (AEIE)</option>
+                                        <option value={'ME'}>Mechanical Engineering (ME)</option>
+                                        <option value={'CE'}>Civil Engineering (CE)</option>
+                                        <option value={'CHE'}>Chemical Engineering (ChE)</option>
+                                        <option value={'BT'}>Biotechnology (BT)</option>
                                     </select>
                                 </div>
                             </div>
