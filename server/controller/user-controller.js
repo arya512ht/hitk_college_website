@@ -52,7 +52,7 @@ export const editUser = async (req, res) => {
     }
 };
 
-// ... (existing code)
+
 
 export const getUserById = async (req, res) => {
     const { id } = req.params;
