@@ -29,7 +29,7 @@ const handleLogin = async (e) => {
   
       if (userData && userData.pass === user.userpassword) {
         console.log("Login Successful!");
-        navigate('/user-dashboard', { state: { user: userData } }); // Pass user data as state
+        navigate('/StudentDashboard', { state: { user: userData } }); // Pass user data as state
       } else {
         console.log("Login Failed. Invalid credentials.");
         setLoginFailed(true);
@@ -41,12 +41,6 @@ const handleLogin = async (e) => {
   
   // ... Rest of the code ...
   
-      
-
-
-
-
-
 
     return (
         <>

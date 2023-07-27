@@ -1,17 +1,13 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Box, Button, Paper, Typography } from '@mui/material';
+import { Box, Paper, Typography } from '@mui/material';
 import './UserDashboard.css';
 
 const UserDashboard = () => {
   const location = useLocation();
   const userData = location.state?.user;
-  const navigate = useNavigate();
 
-  const handleLogout = () => {
-    navigate('/onlinefacility');
-  };
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -31,20 +27,6 @@ const UserDashboard = () => {
       transition={{ duration: 0.5 }}
     >
       <Box className='uback'>
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Box className='dashboard-header'>
-            <Typography variant='h4' component='h1'>
-              Welcome!
-            </Typography>
-            <Button variant='contained' color='primary' onClick={handleLogout}>
-              Log out
-            </Button>
-          </Box>
-        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
