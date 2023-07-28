@@ -30,7 +30,8 @@ const Admission = () => {
         course: '',
         department: '',
         roll: '',
-        adate: ''
+        adate: '',
+
     })
 
     const fileData = (e) => {
@@ -98,7 +99,7 @@ const Admission = () => {
             alert("Please enter a valid email address.");
             return;
         }
-        
+
         // Check if the date of birth is before today's date
         const today = new Date();
         const selectedDOB = new Date(dob);

@@ -45,6 +45,8 @@ import PaymentVerify from "./components/PaymentVerify";
 import StudentVerify from "./components/StudentVerify";
 
 import { Route, Routes } from "react-router-dom";
+import Main from "./components/Main";
+
 
 
 function App() {
@@ -99,6 +101,7 @@ function App() {
         <Route path="/StudentDashboard/Home" element={<Dashborad/>}></Route>
         <Route path="/PaymentVerify" element={<PaymentVerify />}></Route>
         <Route path="/StudentVerify" element={<StudentVerify />}></Route>
+        <Route path="/Main" element={<Main />}></Route>
       </Routes>
     </div>
   );

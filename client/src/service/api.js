@@ -53,11 +53,11 @@ export const deleteUser = async (userId) => {
 
 export const editUser = async (userId, data) => {
   try {
-      const response = await axios.put(`${URL}/editUser/${userId}`, data);
-      return response.data;
+    const response = await axios.put(`${URL}/editUser/${userId}`, data);
+    return response.data;
   } catch (error) {
-      console.log("Error while editing user", error);
-      throw error;
+    console.log("Error while editing user", error);
+    throw error;
   }
 };
 

@@ -80,7 +80,14 @@
         }
 
         .mynotice .mynotice-box .box-top img {
-            height: 180px;
+            height: 140px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .box-body {
+            
+            height: 240px;
             width: 100%;
         }
 
@@ -88,13 +95,13 @@
 
 }
 
-@media (max-width:1024px) {
-    @media (min-width:600px) {
+@media (max-width:800px) {
+    @media (min-width:550px) {
         .mynotice {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-gap: 15px;
-            margin: 25px 20px 20px 10px;
+            margin: 25px 20px 20px 20px;
             border-radius: 5rem;
         }
 

@@ -13,7 +13,7 @@ const Dashboard = () => {
     <div className="Dash-body">
       <div className="Dash-content">
         <SidebarStudent userData={userData} /> {/* Pass the user data to the SidebarStudent component */}
-        <MainDash />
+        <MainDash userData={userData} />
         <RightSide />
       </div>
     </div>
