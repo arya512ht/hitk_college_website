@@ -22,7 +22,16 @@ const userSchema = mongoose.Schema({
     department: String,
     adate: Date,
     roll: Number,
-    image: String
+    image: String,
+    payment: String,
+    cgpa:String,
+    performance:Number,
+    attendance: String,
+    apercentage:Number,
+    operformance:String,
+    progress:Number,
+
+
 });
 
 
