@@ -30,7 +30,10 @@ const userSchema = mongoose.Schema({
     apercentage:Number,
     operformance:String,
     progress:Number,
-
+    verified: {
+        type: Boolean,
+        default: false,
+      },
 
 });
 

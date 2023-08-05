@@ -54,4 +54,14 @@ router.delete('/deleteUser/:id', deleteUser);
 router.put('/editUser/:id', editUser);
 router.get('/getUser/:id', getUserById);
 
+router.put('/verifyUser/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+      const updatedUser = await User.findByIdAndUpdate(id, { verified: true }, { new: true });
+      res.status(200).json(updatedUser);
+    } catch (error) {
+      res.status(400).json({ message: "Error while verifying user." });
+    }
+  });
+
 export default router;
