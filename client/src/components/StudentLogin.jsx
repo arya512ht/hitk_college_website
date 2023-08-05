@@ -20,27 +20,38 @@ const StudentLogin = () => {
 
     // ... Other code ...
 
-const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await getUsersdata({ uname: user.username });
-      const userData = response.data;
-      console.log("User Data from Server:", userData);
-  
-      if (userData && userData.pass === user.userpassword) {
-        console.log("Login Successful!");
-        navigate('/StudentDashboard', { state: { user: userData } }); // Pass user data as state
-      } else {
-        console.log("Login Failed. Invalid credentials.");
-        setLoginFailed(true);
-      }
-    } catch (error) {
-      console.log("Error while logging in", error);
-    }
-  };
-  
-  // ... Rest of the code ...
-  
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+          const response = await getUsersdata({ uname: user.username });
+          const userData = response.data;
+          console.log("User Data from Server:", userData);
+    
+          if (!userData) {
+            console.log("User not found.");
+            setLoginFailed(true);
+            return;
+          }
+    
+          if (userData.pass === user.userpassword) {
+            if (!userData.verified) {
+              console.log("Login Failed. User not verified.");
+              setLoginFailed(true);
+              return;
+            }
+            console.log("Login Successful!");
+            navigate('/StudentDashboard', { state: { user: userData } });
+          } else {
+            console.log("Login Failed. Invalid credentials.");
+            setLoginFailed(true);
+          }
+        } catch (error) {
+          console.log("Error while logging in", error);
+        }
+      };
+
+    // ... Rest of the code ...
+
 
     return (
         <>

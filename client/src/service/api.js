@@ -70,3 +70,13 @@ export const getUserById = async (userId) => {
     throw error;
   }
 };
+
+export const verifyUser = async (userId) => {
+  try {
+    const response = await axios.put(`${URL}/verifyUser/${userId}`);
+    return response.data;
+  } catch (error) {
+    console.log("Error while verifying user", error);
+    throw error;
+  }
+};

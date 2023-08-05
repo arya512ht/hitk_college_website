@@ -209,7 +209,7 @@ const Admission = () => {
                 if (res) {
                     toast({
                         title: res,
-                        description: "Registration Successful",
+                        description: "Registration Successful, wait 24 hours for verification.",
                         status: 'success',
                         duration: 9000,
                         isClosable: true,

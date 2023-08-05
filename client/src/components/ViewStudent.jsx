@@ -90,11 +90,11 @@ const ViewStudent = () => {
                                                         alt="uimage"
                                                         width="50px"
                                                         height="50px"
-                                                        style={{borderRadius:"10px"}}
+                                                        style={{ borderRadius: "10px" }}
                                                     />
                                                 </td>
                                                 <td>
-                                                <button type="button" class="btn btn-outline-success" onClick={() => handleEdit(user)}>Edit</button>
+                                                    <button type="button" class="btn btn-outline-success" onClick={() => handleEdit(user)}>Edit</button>
                                                     <button type="button" class="btn btn-outline-danger" onClick={() => handleDelete(user._id)}>Delete</button>
                                                 </td>
                                             </tr>
@@ -102,7 +102,7 @@ const ViewStudent = () => {
                                     </tbody>
                                 </table>
                             </div>
-                            <button type="button" class="btn btn-primary" onClick={handleLogout} style={{marginTop:"10px"}}>Log Out</button> 
+                            <button type="button" class="btn btn-primary" onClick={handleLogout} style={{ marginTop: "10px" }}>Log Out</button>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
-import { editUser } from "../service/api";
+import { editUser, verifyUser } from "../service/api";
 import './EditStudent.css'
 
 const EditStudent = () => {
@@ -29,6 +29,15 @@ const EditStudent = () => {
       navigate('/Main');
     } catch (error) {
       console.log('Error while updating user', error);
+    }
+  };
+
+  const handleVerify = async () => {
+    try {
+      await verifyUser(user._id);
+      setEditedUser({ ...editedUser, verified: true });
+    } catch (error) {
+      console.log('Error while verifying user', error);
     }
   };
 
@@ -322,7 +331,21 @@ const EditStudent = () => {
         </div>
         
       </div>
-      
+      <div className="inputColumn">
+        <label className="editStudentLabel">Verification Status:</label>
+        <input
+          type="text"
+          name="verified"
+          value={editedUser.verified ? "Verified" : "Not Verified"}
+          readOnly
+          className="editStudentInput"
+        />
+        {!editedUser.verified && (
+          <button type="button" className="btn btn-success" onClick={handleVerify} style={{margin: "10px"}}>
+            Verify User
+          </button>
+        )}
+      </div>
       
       {/* Add other input fields for other user properties */}
       <button type="button" className="btn btn-primary" onClick={handleUpdate}>Update</button>
