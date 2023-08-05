@@ -18,27 +18,38 @@ const PaymentVerify = () => {
     }
 
 
-const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await getUsersdata({ uname: user.username });
-      const userData = response.data;
-      console.log("User Data from Server:", userData);
-  
-      if (userData && userData.pass === user.userpassword) {
-        console.log("Login Successful!");
-        navigate('/know', { state: { user: userData } }); // Pass user data as state
-      } else {
-        console.log("Login Failed. Invalid credentials.");
-        setLoginFailed(true);
-      }
-    } catch (error) {
-      console.log("Error while logging in", error);
-    }
-  };
-  
-  // ... Rest of the code ...
-  
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await getUsersdata({ uname: user.username });
+            const userData = response.data;
+            console.log("User Data from Server:", userData);
+
+            if (!userData) {
+                console.log("User not found.");
+                setLoginFailed(true);
+                return;
+            }
+
+            if (userData.pass === user.userpassword) {
+                if (!userData.verified) {
+                    console.log("Login Failed. User not verified.");
+                    setLoginFailed(true);
+                    return;
+                }
+                console.log("Login Successful!");
+                navigate('/know', { state: { user: userData } });
+            } else {
+                console.log("Login Failed. Invalid credentials.");
+                setLoginFailed(true);
+            }
+        } catch (error) {
+            console.log("Error while logging in", error);
+        }
+    };
+
+    // ... Rest of the code ...
+
 
     return (
         <>
@@ -71,7 +82,7 @@ const handleLogin = async (e) => {
                                         <input type="reset" value={'Reset'} className="mr-2"></input>
                                         <button type="submit" className={'btn-submit'}>Submit</button>
                                     </div>
-                                    {loginFailed && <p>Login Failed. Please check your credentials.</p>}
+                                    {loginFailed && <p>Login Failed.</p>}
                                 </div>
                             </div>
                         </div>
